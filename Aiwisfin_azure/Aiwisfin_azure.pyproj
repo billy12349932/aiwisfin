@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>638e662f-a1ed-4819-ac5b-b54f535e050b</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>runserver.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Web launcher</LaunchProvider>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+    <Name>Aiwisfin_azure</Name>
+    <RootNamespace>Aiwisfin_azure</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Aiwisfin_azure\getData\aiml\AimlParser.py" />
+    <Compile Include="Aiwisfin_azure\getData\aiml\DefaultSubs.py" />
+    <Compile Include="Aiwisfin_azure\getData\aiml\InMemorySessionManager.py" />
+    <Compile Include="Aiwisfin_azure\getData\aiml\Kernel.py" />
+    <Compile Include="Aiwisfin_azure\getData\aiml\PatternMgr.py" />
+    <Compile Include="Aiwisfin_azure\getData\aiml\Utils.py" />
+    <Compile Include="Aiwisfin_azure\getData\aiml\WordSub.py" />
+    <Compile Include="Aiwisfin_azure\getData\aiml\__init__.py" />
+    <Compile Include="Aiwisfin_azure\getData\Currency.py" />
+    <Compile Include="Aiwisfin_azure\getData\data.py" />
+    <Compile Include="Aiwisfin_azure\getData\genBrn.py" />
+    <Compile Include="Aiwisfin_azure\getData\golden.py" />
+    <Compile Include="Aiwisfin_azure\getData\law.py" />
+    <Compile Include="Aiwisfin_azure\getData\oilPrice.py" />
+    <Compile Include="Aiwisfin_azure\getData\petroleum.py" />
+    <Compile Include="Aiwisfin_azure\getData\runAIML.py" />
+    <Compile Include="Aiwisfin_azure\getData\scraper_qa.py" />
+    <Compile Include="Aiwisfin_azure\getData\stock.py" />
+    <Compile Include="Aiwisfin_azure\getData\stock2.py" />
+    <Compile Include="Aiwisfin_azure\getData\test.py" />
+    <Compile Include="Aiwisfin_azure\getData\weather.py" />
+    <Compile Include="Aiwisfin_azure\getData\wiki.py" />
+    <Compile Include="runserver.py" />
+    <Compile Include="Aiwisfin_azure\__init__.py" />
+    <Compile Include="Aiwisfin_azure\views.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Aiwisfin_azure\" />
+    <Folder Include="Aiwisfin_azure\getData\" />
+    <Folder Include="Aiwisfin_azure\getData\.ipynb_checkpoints\" />
+    <Folder Include="Aiwisfin_azure\getData\aiml-doc\" />
+    <Folder Include="Aiwisfin_azure\getData\aiml\" />
+    <Folder Include="Aiwisfin_azure\getData\aiml\__pycache__\" />
+    <Folder Include="Aiwisfin_azure\getData\STOCK-DOC\" />
+    <Folder Include="Aiwisfin_azure\getData\__pycache__\" />
+    <Folder Include="Aiwisfin_azure\img\" />
+    <Folder Include="Aiwisfin_azure\static\" />
+    <Folder Include="Aiwisfin_azure\static\content\" />
+    <Folder Include="Aiwisfin_azure\static\fonts\" />
+    <Folder Include="Aiwisfin_azure\static\scripts\" />
+    <Folder Include="Aiwisfin_azure\templates\" />
+    <Folder Include="Aiwisfin_azure\templates\css\" />
+    <Folder Include="Aiwisfin_azure\templates\fonts\" />
+    <Folder Include="Aiwisfin_azure\templates\fonts\roboto\" />
+    <Folder Include="Aiwisfin_azure\templates\Img\" />
+    <Folder Include="Aiwisfin_azure\templates\js\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Aiwisfin - Web Deploy.pubxml" />
+    <Content Include="Aiwisfin_azure\getData\.ipynb_checkpoints\get_Civil-checkpoint.ipynb" />
+    <Content Include="Aiwisfin_azure\getData\.ipynb_checkpoints\stock_2.0-checkpoint.ipynb" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_brain.brn" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_ETFqa.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku--ai-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku--atomic-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku--bot-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku--computers-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku--defualt.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku--drugs-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku--emotion-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku--geograghy-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku--history-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku--inquiry-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku--knowledge-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku--literature-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku--movie-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku--mp1-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku--mp5-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku--ood-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku--politics-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku--science-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku--sports-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku--user-define.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku-MFR-ai-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku-MFR-atomic-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku-MFR-bot-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku-MFR-computers-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku-MFR-defualt.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku-MFR-drugs-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku-MFR-emotion-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku-MFR-geograghy-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku-MFR-history-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku-MFR-inquiry-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku-MFR-knowledge-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku-MFR-literature-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku-MFR-movie-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku-MFR-mp1-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku-MFR-mp5-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku-MFR-ood-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku-MFR-politics-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku-MFR-science-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku-MFR-sports-cn.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_imtku-MFR-user-define.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\aiwisfin_sd.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\ai_imtku_lbot_faq.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml-doc\std-startup.xml" />
+    <Content Include="Aiwisfin_azure\getData\aiml\self-test.aiml" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\AimlParser.cpython-34.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\AimlParser.cpython-35.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\AimlParser.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\DefaultSubs.cpython-34.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\DefaultSubs.cpython-35.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\DefaultSubs.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\InMemorySessionManager.cpython-34.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\InMemorySessionManager.cpython-35.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\InMemorySessionManager.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\Kernel.cpython-34.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\Kernel.cpython-35.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\Kernel.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\PatternMgr.cpython-34.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\PatternMgr.cpython-35.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\PatternMgr.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\Utils.cpython-34.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\Utils.cpython-35.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\Utils.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\WordSub.cpython-34.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\WordSub.cpython-35.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\WordSub.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\__init__.cpython-34.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\__init__.cpython-35.pyc" />
+    <Content Include="Aiwisfin_azure\getData\aiml\__pycache__\__init__.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\getData\ghostdriver.log" />
+    <Content Include="Aiwisfin_azure\getData\STOCK-DOC\上市櫃公司.txt" />
+    <Content Include="Aiwisfin_azure\getData\STOCK-DOC\上市櫃公司編號%28字典%29.docx" />
+    <Content Include="Aiwisfin_azure\getData\STOCK-DOC\上市櫃公司編號.docx" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\Civil.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\Currency.cpython-35.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\Currency.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\data.cpython-35.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\data.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\golden.cpython-35.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\golden.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\law.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\oilPrice.cpython-35.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\oilPrice.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\petroleum.cpython-34.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\petroleum.cpython-35.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\petroleum.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\runAIML.cpython-34.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\runAIML.cpython-35.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\runAIML.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\stock.cpython-34.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\stock.cpython-35.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\stock.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\stock2.cpython-35.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\stock2.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\test.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\weather.cpython-34.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\weather.cpython-35.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\weather.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\getData\__pycache__\wiki.cpython-36.pyc" />
+    <Content Include="Aiwisfin_azure\img\1.jpeg" />
+    <Content Include="Aiwisfin_azure\img\2.jpeg" />
+    <Content Include="Aiwisfin_azure\img\3.jpeg" />
+    <Content Include="Aiwisfin_azure\img\4.jpeg" />
+    <Content Include="Aiwisfin_azure\img\5.jpeg" />
+    <Content Include="Aiwisfin_azure\img\6.jpeg" />
+    <Content Include="Aiwisfin_azure\img\7.jpeg" />
+    <Content Include="Aiwisfin_azure\img\8.jpeg" />
+    <Content Include="Aiwisfin_azure\img\AIWISFIN.png" />
+    <Content Include="Aiwisfin_azure\img\baseline_account_circle_black_36dp.png" />
+    <Content Include="Aiwisfin_azure\img\baseline_adjust_black_36dp.png" />
+    <Content Include="Aiwisfin_azure\img\baseline_data_usage_black_36dp.png" />
+    <Content Include="Aiwisfin_azure\img\baseline_mic_black_36dp.png" />
+    <Content Include="Aiwisfin_azure\img\baseline_mic_white_48dp.png" />
+    <Content Include="Aiwisfin_azure\img\baseline_reorder_black_48dp.png" />
+    <Content Include="Aiwisfin_azure\img\baseline_search_black_36dp.png" />
+    <Content Include="Aiwisfin_azure\img\baseline_send_black_36dp.png" />
+    <Content Include="Aiwisfin_azure\img\baseline_signal_cellular_alt_black_36dp.png" />
+    <Content Include="Aiwisfin_azure\img\baseline_speaker_notes_black_36dp.png" />
+    <Content Include="Aiwisfin_azure\img\blank.png" />
+    <Content Include="Aiwisfin_azure\img\content.jpg" />
+    <Content Include="Aiwisfin_azure\img\facebook.png" />
+    <Content Include="Aiwisfin_azure\img\FB.png" />
+    <Content Include="Aiwisfin_azure\img\fb超連結.png" />
+    <Content Include="Aiwisfin_azure\img\LINE.png" />
+    <Content Include="Aiwisfin_azure\img\line2.png" />
+    <Content Include="Aiwisfin_azure\img\logo.png" />
+    <Content Include="Aiwisfin_azure\img\microphone.png" />
+    <Content Include="Aiwisfin_azure\img\outline_menu_black_48dp.png" />
+    <Content Include="Aiwisfin_azure\img\outline_message_black_36dp.png" />
+    <Content Include="Aiwisfin_azure\img\portfolio.jpeg" />
+    <Content Include="Aiwisfin_azure\img\table3.png" />
+    <Content Include="Aiwisfin_azure\img\TableE.png" />
+    <Content Include="Aiwisfin_azure\img\user.png" />
+    <Content Include="Aiwisfin_azure\img\v=0.png" />
+    <Content Include="Aiwisfin_azure\img\v=1.png" />
+    <Content Include="Aiwisfin_azure\img\v=2.png" />
+    <Content Include="Aiwisfin_azure\img\v=3.png" />
+    <Content Include="Aiwisfin_azure\img\v=4.png" />
+    <Content Include="Aiwisfin_azure\img\v=5.png" />
+    <Content Include="Aiwisfin_azure\img\v=6.png" />
+    <Content Include="Aiwisfin_azure\img\v=7.png" />
+    <Content Include="Aiwisfin_azure\img\v=8.png" />
+    <Content Include="Aiwisfin_azure\img\v=9.png" />
+    <Content Include="Aiwisfin_azure\img\網頁投資組合圖檔.png" />
+    <Content Include="Aiwisfin_azure\static\all.css" />
+    <Content Include="Aiwisfin_azure\static\all.js" />
+    <Content Include="Aiwisfin_azure\static\index.css" />
+    <Content Include="Aiwisfin_azure\static\index.js" />
+    <Content Include="Aiwisfin_azure\static\index.min.css" />
+    <Content Include="Aiwisfin_azure\static\index.min.js" />
+    <Content Include="Aiwisfin_azure\static\index_en.js" />
+    <Content Include="Aiwisfin_azure\static\index_home.js" />
+    <Content Include="Aiwisfin_azure\static\jquery.js" />
+    <Content Include="Aiwisfin_azure\static\style.css" />
+    <Content Include="Aiwisfin_azure\static\web.config" />
+    <Content Include="Aiwisfin_azure\templates\1C.html" />
+    <Content Include="Aiwisfin_azure\templates\1E.html" />
+    <Content Include="Aiwisfin_azure\templates\2C.html" />
+    <Content Include="Aiwisfin_azure\templates\2C_1.html" />
+    <Content Include="Aiwisfin_azure\templates\2E.html" />
+    <Content Include="Aiwisfin_azure\templates\2E_1.html" />
+    <Content Include="Aiwisfin_azure\templates\css\all.css" />
+    <Content Include="Aiwisfin_azure\templates\css\main.css" />
+    <Content Include="Aiwisfin_azure\templates\css\materialize.css" />
+    <Content Include="Aiwisfin_azure\templates\css\materialize.min.css" />
+    <Content Include="Aiwisfin_azure\templates\fonts\roboto\Roboto-Bold.woff" />
+    <Content Include="Aiwisfin_azure\templates\fonts\roboto\Roboto-Bold.woff2" />
+    <Content Include="Aiwisfin_azure\templates\fonts\roboto\Roboto-Light.woff" />
+    <Content Include="Aiwisfin_azure\templates\fonts\roboto\Roboto-Light.woff2" />
+    <Content Include="Aiwisfin_azure\templates\fonts\roboto\Roboto-Medium.woff" />
+    <Content Include="Aiwisfin_azure\templates\fonts\roboto\Roboto-Medium.woff2" />
+    <Content Include="Aiwisfin_azure\templates\fonts\roboto\Roboto-Regular.woff" />
+    <Content Include="Aiwisfin_azure\templates\fonts\roboto\Roboto-Regular.woff2" />
+    <Content Include="Aiwisfin_azure\templates\fonts\roboto\Roboto-Thin.woff" />
+    <Content Include="Aiwisfin_azure\templates\fonts\roboto\Roboto-Thin.woff2" />
+    <Content Include="Aiwisfin_azure\templates\Img\1.jpeg" />
+    <Content Include="Aiwisfin_azure\templates\Img\2.jpeg" />
+    <Content Include="Aiwisfin_azure\templates\Img\3.jpeg" />
+    <Content Include="Aiwisfin_azure\templates\Img\4.jpeg" />
+    <Content Include="Aiwisfin_azure\templates\Img\5.jpeg" />
+    <Content Include="Aiwisfin_azure\templates\Img\6.jpeg" />
+    <Content Include="Aiwisfin_azure\templates\Img\7.jpeg" />
+    <Content Include="Aiwisfin_azure\templates\Img\8.jpeg" />
+    <Content Include="Aiwisfin_azure\templates\Img\blank.png" />
+    <Content Include="Aiwisfin_azure\templates\Img\content.jpg" />
+    <Content Include="Aiwisfin_azure\templates\Img\facebook.png" />
+    <Content Include="Aiwisfin_azure\templates\Img\FB.png" />
+    <Content Include="Aiwisfin_azure\templates\Img\fb超連結.png" />
+    <Content Include="Aiwisfin_azure\templates\Img\LINE.png" />
+    <Content Include="Aiwisfin_azure\templates\Img\line2.png" />
+    <Content Include="Aiwisfin_azure\templates\Img\logo.png" />
+    <Content Include="Aiwisfin_azure\templates\Img\portfolio.jpeg" />
+    <Content Include="Aiwisfin_azure\templates\Img\table3.png" />
+    <Content Include="Aiwisfin_azure\templates\Img\TableE.png" />
+    <Content Include="Aiwisfin_azure\templates\Img\v=0.png" />
+    <Content Include="Aiwisfin_azure\templates\Img\v=1.png" />
+    <Content Include="Aiwisfin_azure\templates\Img\v=2.png" />
+    <Content Include="Aiwisfin_azure\templates\Img\v=3.png" />
+    <Content Include="Aiwisfin_azure\templates\Img\v=4.png" />
+    <Content Include="Aiwisfin_azure\templates\Img\v=5.png" />
+    <Content Include="Aiwisfin_azure\templates\Img\v=6.png" />
+    <Content Include="Aiwisfin_azure\templates\Img\v=7.png" />
+    <Content Include="Aiwisfin_azure\templates\Img\v=8.png" />
+    <Content Include="Aiwisfin_azure\templates\Img\v=9.png" />
+    <Content Include="Aiwisfin_azure\templates\Img\網頁投資組合圖檔.png" />
+    <Content Include="Aiwisfin_azure\templates\index_en.html" />
+    <Content Include="Aiwisfin_azure\templates\jquery.js" />
+    <Content Include="Aiwisfin_azure\templates\js\all.js" />
+    <Content Include="Aiwisfin_azure\templates\js\materialize.js" />
+    <Content Include="Aiwisfin_azure\templates\js\materialize.min.js" />
+    <Content Include="requirements.txt" />
+    <Content Include="Aiwisfin_azure\static\content\bootstrap.css" />
+    <Content Include="Aiwisfin_azure\static\content\bootstrap.min.css" />
+    <Content Include="Aiwisfin_azure\static\content\site.css" />
+    <Content Include="Aiwisfin_azure\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Aiwisfin_azure\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Aiwisfin_azure\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Aiwisfin_azure\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Aiwisfin_azure\static\scripts\bootstrap.js" />
+    <Content Include="Aiwisfin_azure\static\scripts\bootstrap.min.js" />
+    <Content Include="Aiwisfin_azure\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Aiwisfin_azure\static\scripts\jquery-1.10.2.js" />
+    <Content Include="Aiwisfin_azure\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="Aiwisfin_azure\static\scripts\jquery-1.10.2.min.map" />
+    <Content Include="Aiwisfin_azure\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Aiwisfin_azure\static\scripts\jquery.validate.js" />
+    <Content Include="Aiwisfin_azure\static\scripts\jquery.validate.min.js" />
+    <Content Include="Aiwisfin_azure\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Aiwisfin_azure\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Aiwisfin_azure\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="Aiwisfin_azure\static\scripts\respond.js" />
+    <Content Include="Aiwisfin_azure\static\scripts\respond.min.js" />
+    <Content Include="Aiwisfin_azure\static\scripts\_references.js" />
+    <Content Include="Aiwisfin_azure\templates\index.html" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.6</Version>
+      <Description>env (Python 3.6 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
