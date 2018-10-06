@@ -4,7 +4,7 @@ from Aiwisfin_azure.getData.runAIML import runAIML
 from Aiwisfin_azure.getData.stock2 import getfixstock
 from Aiwisfin_azure.getData.oilPrice import getOilPrice
 from Aiwisfin_azure.getData.golden import getGolden
-from Aiwisfin_azure.getData.Currency import getCurrency
+from Aiwisfin_azure.getData.Currency import getCurrency,exchangeBuy
 from Aiwisfin_azure.getData.data import getSite,getStock,getStocNum
 from Aiwisfin_azure.getData.law import get_Civil, get_constitution,get_criminal,get_Sexual
 import re
@@ -23,11 +23,13 @@ from Aiwisfin_azure import app
 
 line_bot_api = LineBotApi('qdLjteAVKJ6iSgHoK9tNFbtt70EZZiDL46zzeYe/oOtYcKVAnpCYdxE0rDJ9qkX2LaXoaJUwI60jdNmPuEE+icH2a3w/vZIoploibUU/e1PVRVP3++KRP5CNknJyuRe0kv8Fy67V3a9ConpTCn9CNwdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('47966f59dc72d9968a9f5c1723a42a7c')
-
+@app.route("/home")
+def home():
+    return render_template('home.html')
 
 @app.route("/")
 def index():
-    return render_template('1C.html')
+    return render_template('home.html')
 
 @app.route("/en")
 def index_eng():
@@ -75,10 +77,7 @@ def add_numbers():
             reply ='是一種在證券交易所交易，提供投資人參與指數表現的指數基金。ETF將指數證券化，投資人不以傳統方式直接進行一籃子證券之投資，而是透過持有表彰指數標的證券權益的受益憑證來間接投資。'
         elif(re.search('證明',query)!=None):
             reply='<img src="https://cdn.discordapp.com/attachments/461176037397626880/489404601863503912/unknown.png" alt="https://cdn.discordapp.com/attachments/461176037397626880/489404601863503912/unknown.png" title="圖表">由圖表可顯示我們預測的價格與實際的價格相當接近'
-        elif(re.search('DO YOU',query)!=None):
-            reply ='He is a joke'
-        elif(re.search('HAVE A NICE',query)!=None):
-            reply = "Thank you"
+    
         elif(re.search('民法',query)!=None):
             try:
                 regex = re.compile('\d+')
@@ -105,6 +104,15 @@ def add_numbers():
             regex = re.compile(getSite())
             query = regex.search(query)
             reply=getWeather(query.group(1),2)
+        elif(re.search("大盤",query)!=None):
+            if(re.search('(成交|漲跌|漲幅|金額)',query)!=None):
+                    select ={'成交':0,'漲跌':1,'漲幅':2,'金額':3,} 
+                    regex = re.compile('(成交|漲跌|漲幅|金額)')
+                    query = regex.search(query)
+                    reply = getTse(select[query.group()])
+            else:
+                reply= getTse(4)
+
         elif(re.search(getStock(),query)!=None):
             stock = getStocNum()
             regex = re.compile(getStock())
@@ -116,6 +124,19 @@ def add_numbers():
                 reply =  getfixstock(stock[stockname.group(0)],select[stockCode.group(0)])
             else:
                 reply = getfixstock(stock[stockname.group(0)],0)
+        
+        elif(re.search('(美金|日圓|日元|人民幣|英鎊|歐元)',query)!=None):
+            if(re.search('(買)',query)!=None):
+                regex = re.compile('\d+')
+                money = regex.search(query)
+                regex = re.compile('(美金|日圓|日元|人民幣|英鎊|歐元)')
+                c = regex.search(query)
+                reply = exchangeBuy(c.group(),float(money.group()))
+            else:
+                 regex = re.compile('(美金|日圓|日元|人民幣|英鎊|歐元)')
+                 query = regex.search(query)
+                 reply = getCurrency(query.group(1))
+           
         elif(re.search('\d',query)!=None):
             regex = re.compile('\d+')
             stocknum=regex.search(query)

@@ -67,12 +67,13 @@
     <Folder Include="Aiwisfin_azure\static\" />
     <Folder Include="Aiwisfin_azure\static\content\" />
     <Folder Include="Aiwisfin_azure\static\fonts\" />
+    <Folder Include="Aiwisfin_azure\static\fonts\roboto\" />
+    <Folder Include="Aiwisfin_azure\static\img\" />
     <Folder Include="Aiwisfin_azure\static\scripts\" />
     <Folder Include="Aiwisfin_azure\templates\" />
     <Folder Include="Aiwisfin_azure\templates\css\" />
     <Folder Include="Aiwisfin_azure\templates\fonts\" />
     <Folder Include="Aiwisfin_azure\templates\fonts\roboto\" />
-    <Folder Include="Aiwisfin_azure\templates\Img\" />
     <Folder Include="Aiwisfin_azure\templates\js\" />
   </ItemGroup>
   <ItemGroup>
@@ -226,6 +227,24 @@
     <Content Include="Aiwisfin_azure\img\網頁投資組合圖檔.png" />
     <Content Include="Aiwisfin_azure\static\all.css" />
     <Content Include="Aiwisfin_azure\static\all.js" />
+    <Content Include="Aiwisfin_azure\static\content\materialize.css" />
+    <Content Include="Aiwisfin_azure\static\content\materialize.min.css" />
+    <Content Include="Aiwisfin_azure\static\content\style.css" />
+    <Content Include="Aiwisfin_azure\static\fonts\roboto\Roboto-Bold.woff" />
+    <Content Include="Aiwisfin_azure\static\fonts\roboto\Roboto-Bold.woff2" />
+    <Content Include="Aiwisfin_azure\static\fonts\roboto\Roboto-Light.woff" />
+    <Content Include="Aiwisfin_azure\static\fonts\roboto\Roboto-Light.woff2" />
+    <Content Include="Aiwisfin_azure\static\fonts\roboto\Roboto-Medium.woff" />
+    <Content Include="Aiwisfin_azure\static\fonts\roboto\Roboto-Medium.woff2" />
+    <Content Include="Aiwisfin_azure\static\fonts\roboto\Roboto-Regular.woff" />
+    <Content Include="Aiwisfin_azure\static\fonts\roboto\Roboto-Regular.woff2" />
+    <Content Include="Aiwisfin_azure\static\fonts\roboto\Roboto-Thin.woff" />
+    <Content Include="Aiwisfin_azure\static\fonts\roboto\Roboto-Thin.woff2" />
+    <Content Include="Aiwisfin_azure\static\img\19964_en_1.jpg" />
+    <Content Include="Aiwisfin_azure\static\img\background2.jpg" />
+    <Content Include="Aiwisfin_azure\static\img\background3.jpg" />
+    <Content Include="Aiwisfin_azure\static\img\logo2.png" />
+    <Content Include="Aiwisfin_azure\static\img\portfolio.jpg" />
     <Content Include="Aiwisfin_azure\static\index.css" />
     <Content Include="Aiwisfin_azure\static\index.js" />
     <Content Include="Aiwisfin_azure\static\index.min.css" />
@@ -233,6 +252,9 @@
     <Content Include="Aiwisfin_azure\static\index_en.js" />
     <Content Include="Aiwisfin_azure\static\index_home.js" />
     <Content Include="Aiwisfin_azure\static\jquery.js" />
+    <Content Include="Aiwisfin_azure\static\scripts\init.js" />
+    <Content Include="Aiwisfin_azure\static\scripts\materialize.js" />
+    <Content Include="Aiwisfin_azure\static\scripts\materialize.min.js" />
     <Content Include="Aiwisfin_azure\static\style.css" />
     <Content Include="Aiwisfin_azure\static\web.config" />
     <Content Include="Aiwisfin_azure\templates\1C.html" />
@@ -255,36 +277,7 @@
     <Content Include="Aiwisfin_azure\templates\fonts\roboto\Roboto-Regular.woff2" />
     <Content Include="Aiwisfin_azure\templates\fonts\roboto\Roboto-Thin.woff" />
     <Content Include="Aiwisfin_azure\templates\fonts\roboto\Roboto-Thin.woff2" />
-    <Content Include="Aiwisfin_azure\templates\Img\1.jpeg" />
-    <Content Include="Aiwisfin_azure\templates\Img\2.jpeg" />
-    <Content Include="Aiwisfin_azure\templates\Img\3.jpeg" />
-    <Content Include="Aiwisfin_azure\templates\Img\4.jpeg" />
-    <Content Include="Aiwisfin_azure\templates\Img\5.jpeg" />
-    <Content Include="Aiwisfin_azure\templates\Img\6.jpeg" />
-    <Content Include="Aiwisfin_azure\templates\Img\7.jpeg" />
-    <Content Include="Aiwisfin_azure\templates\Img\8.jpeg" />
-    <Content Include="Aiwisfin_azure\templates\Img\blank.png" />
-    <Content Include="Aiwisfin_azure\templates\Img\content.jpg" />
-    <Content Include="Aiwisfin_azure\templates\Img\facebook.png" />
-    <Content Include="Aiwisfin_azure\templates\Img\FB.png" />
-    <Content Include="Aiwisfin_azure\templates\Img\fb超連結.png" />
-    <Content Include="Aiwisfin_azure\templates\Img\LINE.png" />
-    <Content Include="Aiwisfin_azure\templates\Img\line2.png" />
-    <Content Include="Aiwisfin_azure\templates\Img\logo.png" />
-    <Content Include="Aiwisfin_azure\templates\Img\portfolio.jpeg" />
-    <Content Include="Aiwisfin_azure\templates\Img\table3.png" />
-    <Content Include="Aiwisfin_azure\templates\Img\TableE.png" />
-    <Content Include="Aiwisfin_azure\templates\Img\v=0.png" />
-    <Content Include="Aiwisfin_azure\templates\Img\v=1.png" />
-    <Content Include="Aiwisfin_azure\templates\Img\v=2.png" />
-    <Content Include="Aiwisfin_azure\templates\Img\v=3.png" />
-    <Content Include="Aiwisfin_azure\templates\Img\v=4.png" />
-    <Content Include="Aiwisfin_azure\templates\Img\v=5.png" />
-    <Content Include="Aiwisfin_azure\templates\Img\v=6.png" />
-    <Content Include="Aiwisfin_azure\templates\Img\v=7.png" />
-    <Content Include="Aiwisfin_azure\templates\Img\v=8.png" />
-    <Content Include="Aiwisfin_azure\templates\Img\v=9.png" />
-    <Content Include="Aiwisfin_azure\templates\Img\網頁投資組合圖檔.png" />
+    <Content Include="Aiwisfin_azure\templates\home.html" />
     <Content Include="Aiwisfin_azure\templates\index_en.html" />
     <Content Include="Aiwisfin_azure\templates\jquery.js" />
     <Content Include="Aiwisfin_azure\templates\js\all.js" />
