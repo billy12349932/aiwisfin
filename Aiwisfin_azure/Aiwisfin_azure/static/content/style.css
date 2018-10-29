@@ -5,11 +5,16 @@
  *
  * Made By MaterializeCSS.com
  */
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+html {
+    font-family: 'Noto Sans TC', sans-serif;
+}
 
 nav ul a,
 nav .brand-logo {
     color: #444;
-  
+    
 }
 .video-container {
     position: relative;

@@ -1,0 +1,9 @@
+runtime: python
+env: flex
+entrypoint: gunicorn -b :$PORT runserver:app
+runtime_config:
+  python_version: 3.5
+
+skip_files:
+- ./env
+- ./obj

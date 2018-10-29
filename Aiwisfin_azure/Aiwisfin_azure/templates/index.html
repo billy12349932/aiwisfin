@@ -17,7 +17,7 @@
     <div class="navbar-fixed">
         <nav class="white z-index-2">
             <div class="container">
-               <div class="nav-wrapper">
+                <div class="nav-wrapper">
                     <a href="#!" class="brand-logo "><img class="brand-logo" src="./img/AIWISFIN.png" /></a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><img src="./img/outline_menu_black_48dp.png" border="0" style="width:50px;height:50px;margin-top:7.5px"></a>
                     <ul class="right hide-on-med-and-down">
@@ -73,8 +73,79 @@
     </div>
 
 
+    <a class='dropdown-button btn blue lighten-1' href='#' data-activates='dropdown1'>熱門查詢</a>
 
-    <div id="chatbox_content" class="card white"style="border-style:solid;border-color: #60646c ;margin-top:10px">
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content' style="width:250px">
+
+        <li>
+            <a href="#chatbox_content" id="sendbox2" class="btn-large waves-effect waves-light blue-text white text-darken-2 btn-hot">投資組合</a>
+        </li>
+
+        <li>
+            <a href="#chatbox_content" id="sendbox3" class="btn-large waves-effect waves-light  blue-text white text-darken-2 btn-hot">玉山金控</a>
+        </li>
+        <li>
+            <a href="#chatbox_content" id="sendbox4" class="btn-large waves-effect waves-light  blue-text white text-darken-2 btn-hot">美金匯率</a>
+        </li>
+        <li>
+            <a href="#chatbox_content" id="sendbox5" class="btn-large waves-effect waves-light blue-text white text-darken-2 btn-hot">天氣查詢</a>
+        </li>
+        <li>
+            <a href="#chatbox_content" id="sendbox6" class="btn-large waves-effect waves-light blue-text white text-darken-2 btn-hot">申辦信用卡</a>
+        </li>
+        <li>
+            <a href="#chatbox_content" id="sendbox7" class="btn-large waves-effect waves-light blue-text white text-darken-2 btn-hot">如何開卡</a>
+        </li>
+        <li>
+            <a href="#chatbox_content" id="sendbox8" class="btn-large waves-effect waves-light blue-text white text-darken-2 btn-hot">信用卡款項疑問</a>
+        </li>
+        <li>
+            <a href="#chatbox_content" id="sendbox9" class="btn-large waves-effect waves-light blue-text white text-darken-2 btn-hot">繳款方式</a>
+        </li>
+        <li>
+            <a href="#chatbox_content" id="sendbox10" class="btn-large waves-effect waves-light blue-text white text-darken-2 btn-hot">查帳單金額</a>
+        </li>
+        <li>
+            <a href="#chatbox_content" id="sendbox11" class="btn-large waves-effect waves-light blue-text white text-darken-2 btn-hot">原油價</a>
+        </li>
+    </ul>
+    <!--<div class="container"><h5>熱門查詢</h5></div>
+
+    <div class=container>
+
+        <div align="center" style="display:inline-block">
+            <a href="#chatbox_content" id="sendbox2" class="btn-large waves-effect waves-light  blue lighten-1 btn-hot">投資組合</a>
+        </div>
+
+        <div align="center" style="display:inline-block">
+            <a href="#chatbox_content" id="sendbox4" class="btn-large waves-effect waves-light  blue lighten-1 btn-hot">玉山金控</a>
+        </div>
+        <div align="center" style="display:inline-block">
+            <a href="#chatbox_content" id="sendbox5" class="btn-large waves-effect waves-light  blue lighten-1 btn-hot">美金匯率</a>
+        </div>
+        <div align="center" style="display:inline-block">
+            <a href="#chatbox_content" id="sendbox6" class="btn-large waves-effect waves-light  blue lighten-1 btn-hot">台北天氣</a>
+        </div>
+        <div align="center" style="display:inline-block">
+            <a href="#chatbox_content" id="sendbox7" class="btn-large waves-effect waves-light  blue lighten-1 btn-hot">辦信用卡</a>
+        </div>
+        <div align="center" style="display:inline-block">
+            <a href="#chatbox_content" id="sendbox8" class="btn-large waves-effect waves-light  blue lighten-1 btn-hot">如何開卡</a>
+        </div>
+        <div align="center" style="display:inline-block">
+            <a href="#chatbox_content" id="sendbox9" class="btn-large waves-effect waves-light  blue lighten-1 btn-hot">款項疑問</a>
+        </div>
+        <div align="center" style="display:inline-block">
+            <a href="#chatbox_content" id="sendbox10" class="btn-large waves-effect waves-light  blue lighten-1 btn-hot">繳款方式</a>
+        </div>
+        <div align="center" style="display:inline-block">
+            <a href="#chatbox_content" id="sendbox11" class="btn-large waves-effect waves-light  blue lighten-1 btn-hot">查帳單金額</a>
+        </div>
+    </div>-->
+
+
+    <div id="chatbox_content" class="card white" style="border-style:solid;border-color: #60646c ;margin-top:-20px">
         <div class="container">
             <div class="panel panel-primary">
                 <div class="panel-body">
@@ -83,10 +154,13 @@
                             <div class="container">
                                 <div class="message row">
                                     <div class="col s10 m10 l10 chat-body clearfix left">
+
                                         <img src=".\img\AIWISFIN.png" alt="User Avatar" class="mfr circle responsive-img" align="left">
                                         <p class="left">
+
                                             您好，請問需要什麼服務?
                                         </p>
+
                                     </div>
                                 </div>
                             </div>
@@ -97,24 +171,22 @@
         </div>
     </div>
 
-   
-        <div class="col s12 m12 l8">
-            <form action="/">
-                    <div id="input_box" class="card" style="">
-                        <div id="voiceBtn" class="btn-floating waves-effect waves-light black" style="display:inline-block">
-                            <img src="./img/baseline_mic_white_48dp.png" style="height:36px;width:36px;display:inline" alt="語音辨識">
-                        </div>
-                        <div class="input-field white" style="display:inline-block">
-                            <input placeholder="..." id="input_text" type="text" class="validate" name="query">
-                        </div>
-                        <div align="center" style="display:inline-block">
-                            <a id="sendbox" class="btn-floating waves-effect waves-light white "><img src="./img/baseline_send_black_36dp.png" alt="發送" style="width:36px;height:36px;display:inline"></a>
-                        </div>
-                    </div>
-            </form>
-        </div>
 
-   
+    <div class="col s12 m12 l8">
+        <form action="/">
+            <div id="input_box" class="card" style="">
+                <div id="voiceBtn" class="btn-floating waves-effect waves-light black" style="display:inline-block">
+                    <img src="./img/baseline_mic_white_48dp.png" style="height:36px;width:36px;display:inline" alt="語音辨識">
+                </div>
+                <div class="input-field white" style="display:inline-block">
+                    <input placeholder="..." id="input_text" type="text" class="validate" name="query">
+                </div>
+                <div align="center" style="display:inline-block">
+                    <a id="sendbox" class="btn-floating waves-effect waves-light white "><img src="./img/baseline_send_black_36dp.png" alt="發送" style="width:36px;height:36px;display:inline"></a>
+                </div>
+            </div>
+        </form>
+    </div>
 
 
 
