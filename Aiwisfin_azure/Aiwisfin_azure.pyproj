@@ -45,7 +45,6 @@
     <Compile Include="Aiwisfin_azure\getData\petroleum.py" />
     <Compile Include="Aiwisfin_azure\getData\runAIML.py" />
     <Compile Include="Aiwisfin_azure\getData\scraper_qa.py" />
-    <Compile Include="Aiwisfin_azure\getData\stock.py" />
     <Compile Include="Aiwisfin_azure\getData\stock2.py" />
     <Compile Include="Aiwisfin_azure\getData\test.py" />
     <Compile Include="Aiwisfin_azure\getData\weather.py" />
@@ -271,6 +270,7 @@
     <Content Include="Aiwisfin_azure\img\v=8.png" />
     <Content Include="Aiwisfin_azure\img\v=9.png" />
     <Content Include="Aiwisfin_azure\img\網頁投資組合圖檔.png" />
+    <Content Include="mydatabase.sqlite" />
     <Content Include="Aiwisfin_azure\static\all.css" />
     <Content Include="Aiwisfin_azure\static\all.js" />
     <Content Include="Aiwisfin_azure\static\content\materialize.css" />
@@ -330,9 +330,6 @@
     <Content Include="Aiwisfin_azure\templates\js\all.js" />
     <Content Include="Aiwisfin_azure\templates\js\materialize.js" />
     <Content Include="Aiwisfin_azure\templates\js\materialize.min.js" />
-    <Content Include="mydatabase.sqlite">
-      <Publish>True</Publish>
-    </Content>
     <Content Include="requirements.txt" />
     <Content Include="Aiwisfin_azure\static\content\bootstrap.css" />
     <Content Include="Aiwisfin_azure\static\content\bootstrap.min.css" />

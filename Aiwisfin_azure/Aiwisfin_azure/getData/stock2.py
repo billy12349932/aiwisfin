@@ -5,16 +5,16 @@ import re
 def getfixstock(code,n):
     
     try:
-         r = requests.get('https://tw.stock.yahoo.com/q/q?s='+code)
+         r = requests.get('https://tw.stock.yahoo.com/q/q?s='+str(code))
          soup = BeautifulSoup(r.text, 'html.parser')
          tables = soup.find_all('table')
-         row = tables[5].find_all('td')[0].findAll('tr')[1].findAll('td')[0:-1]
+         row = tables[5].find_all('td')[:-1]
          for item in row:
-             row[row.index(item)] = item.text.strip()
-             stock=row[0]
-             stock=re.sub(r'加到投資組合','',stock)
-        
-         if n==0:
+              row[row.index(item)] = item.text.strip()
+         stock=re.sub("加到投資組合","",row[0])
+         if row[1]=='':
+             return "查無該股"
+         elif n==0:
              return(stock+"各項資訊如下:\n"
                    '市價:'+row[2]+'\n'
                     '買價:'+row[3]+'\n'
@@ -23,7 +23,8 @@ def getfixstock(code,n):
                     '前日收盤價:'+row[7]+'\n'
                     '開盤:'+row[8]+'\n'
                     '最高:'+row[9]+'\n'
-                    '買低:'+row[10]+'\n')
+                    '買低:'+row[10]+'\n'
+                     )
          elif n==1:
              return(stock+'市價:'+row[2])
          elif n==2:
@@ -40,16 +41,17 @@ def getfixstock(code,n):
              return(stock+'最高:'+row[9])
          elif n==8:
              return(stock+'最低:'+row[10])
-            
-    
+        
        
         
              
     except Exception :
         return('查無該股')
         
-print(getfixstock('2330',1))
 
 
 
+if __name__ == "__main__":
+    print("最後維護時間為於2018/12/4 12:05", getfixstock(2330,0))
+   
 

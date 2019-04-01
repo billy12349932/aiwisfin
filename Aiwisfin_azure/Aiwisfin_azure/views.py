@@ -20,9 +20,7 @@ from Aiwisfin_azure import app
 
 import sqlite3 as lite
 
-con = lite.connect('mydatabase.sqlite')
-cur = con.cursor()
-sqlinset = 'insert into qa(question,answer)values(?,?)'
+
 
 
 line_bot_api = LineBotApi('qdLjteAVKJ6iSgHoK9tNFbtt70EZZiDL46zzeYe/oOtYcKVAnpCYdxE0rDJ9qkX2LaXoaJUwI60jdNmPuEE+icH2a3w/vZIoploibUU/e1PVRVP3++KRP5CNknJyuRe0kv8Fy67V3a9ConpTCn9CNwdB04t89/1O/w1cDnyilFU=')
@@ -65,22 +63,64 @@ def add_numbers():
     query = query.upper()
     query = re.sub('臺','台',query)
     reply = '很抱歉，無法替您解決此問題，建議點選上方Facebook圖示直接與我們聯絡'
+    if query !="熱門查詢":
+        con = lite.connect('mydatabase.sqlite')
+        cur = con.cursor()
+        sql1 = cur.execute('select * from HotValue where input=?',[query]).fetchone()
+        if sql1 != None:
+            cur.execute('update HotValue set hot=? where input=?',(sql1[1]+1,query))
+        else:
+            cur.execute('insert into HotValue(input,hot)values(?,?)',(query,1))
+        con.commit()
+        con.close()
     
     try:
         if(re.search('氣溫',query)!=None):
             regex = re.compile(getSite())
             query = regex.search(query)
             reply=getWeather(query.group(1),0)
-        elif(re.search('學說話',query)!=None):
+        elif(re.search('公告',query)!=None):
+            reply="1.目前所有服務修復完畢正常運作中<br>\
+                   2.Facebook機器人功能受限於官方相關新規定而無法對外正式發佈，敬請見諒"
+        elif(re.search('熱門查詢',query)!=None):
+             con = lite.connect('mydatabase.sqlite')
+             cur = con.cursor()
+             sql1 = cur.execute('select input from HotValue order by hot desc limit 10').fetchall()
+             result = re.sub(",\)","<br>",str(sql1))
+             result = re.sub(","," ",result)
+             result = re.sub("\["," ",result)
+             result = re.sub("\]"," ",result)
+             result = re.sub("\'"," ",result)
+             result = re.sub("\("," ",result)
+             result = re.sub("\)"," ",result)
+             reply = "熱門查詢排行榜:<br>"+result
+             
+             con.close()
+            
+        elif(re.match('學說話管理員',query)!=None):
+            con = lite.connect('mydatabase.sqlite')
+            cur = con.cursor()
+            ret = cur.fetchall()            
+            cur.execute('select * from qa ')
+            con.close()
+            reply= re.sub(',','<br>',str(ret))
+        elif(re.search('學說話',query)!=None and query!="公告"):
             try:
+                con = lite.connect('mydatabase.sqlite')
+                cur = con.cursor()
+                sqlinset = 'insert into qa(question,answer)values(?,?)'
                 query = query.split(";")
                 ret=query
                 cur.execute(sqlinset,ret[1:])
                 con.commit()
+                con.close()
                 reply="學會了! 問題:"+query[1]+" 回答:"+query[2]
             except Exception as e:
-                reply='請以;分隔問答(EX:學說話;你好嗎;我很好)'
+                
+                 reply='請以;分隔問答(EX:學說話;你好嗎;我很好)'
+       
         elif(re.search('(我姓|我叫|我是)',query)!=None):
+
             reply=query[2]+'先生(女士)您好!歡迎使用Aiwsifin智慧客服，請問需要哪些幫助呢?'
         elif(re.search('(先生|小姐)',query)!=None):
             reply=query[0]+'先生(女士)您好!歡迎使用Aiwsifin智慧客服，請問需要哪些幫助呢?'
@@ -131,7 +171,7 @@ def add_numbers():
                 query = regex.search(query)
                 reply=getWeather(query.group(1),2)
             except Exception as e:
-                reply="請搭配地點查詢"
+                reply="請搭配地點查詢(範例:台北天氣)"
         elif(re.search("大盤",query)!=None):
             if(re.search('(成交|漲跌|漲幅|金額)',query)!=None):
                     select ={'成交':0,'漲跌':1,'漲幅':2,'金額':3,} 
@@ -174,7 +214,7 @@ def add_numbers():
             stocknum=regex.search(query)
             if (re.search('(市|買|賣|成交|收|開|高|低)',query)!=None):
                 regex = re.compile('(市|買|賣|成交|收|開|高|低)')
-                select ={'市':1,'買':2,'賣':3,'成交':4,'收':5,'開':6,'高':7,'低':8} 
+                select ={'市':1,'買':2,'賣':3,'成交':4,'收':5,'開':6,'高':7,'低':8,'漲跌':9} 
                 stockCode =regex.search(query)
                 reply =  getfixstock(stocknum.group(),select[stockCode.group(0)])
             else:
@@ -183,11 +223,12 @@ def add_numbers():
             reply = getOilPrice()
     
         elif(re.search('黃金',query)!=None):
-            reply = "因資料來源網頁改版，暫時無法提供服務"
+            reply = getGolden()
        
             
         else:
-           
+            con = lite.connect('mydatabase.sqlite')
+            cur = con.cursor()
             cur.execute('select * from qa where question =? order by Random()',[query])
             ret = cur.fetchone()
             
@@ -203,6 +244,7 @@ def add_numbers():
                         reply = wiki_search(query)
                     else:
                         raise Exception
+            con.close()
             
             
         
@@ -233,6 +275,16 @@ def handle_message(event):
     query = event.message.text
     query = query.upper()
     query = re.sub('臺','台',query)
+    if query !="熱門查詢":
+        con = lite.connect('mydatabase.sqlite')
+        cur = con.cursor()
+        sql1 = cur.execute('select * from HotValue where input=?',[query]).fetchone()
+        if sql1 != None:
+            cur.execute('update HotValue set hot=? where input=?',(sql1[1]+1,query))
+        else:
+            cur.execute('insert into HotValue(input,hot)values(?,?)',(query,1))
+        con.commit()
+        con.close()
     
     if(re.search('氣溫',query)!=None):
         regex = re.compile('(台北|新北|台中|高雄|台南|桃園|基隆|新竹|雲林|南投|嘉義|苗栗|彰化|花蓮|台東|澎湖|宜蘭)')

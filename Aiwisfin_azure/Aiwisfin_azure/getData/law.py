@@ -40,5 +40,5 @@ def get_Sexual():
 # In[130]:
 
 
-print(get_Civil('1'))
+
 

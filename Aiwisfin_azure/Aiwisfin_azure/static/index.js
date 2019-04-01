@@ -3,7 +3,7 @@ window.onload = function speak(){
     var utterThis = new SpeechSynthesisUtterance('您好，請問需要什麼服務?');
     utterThis.volume = 1;
 	utterThis.pitch = 1;
-    utterThis.rate = 1.25;
+    utterThis.rate = 1.5;
     utterThis.lang = 'zh';
 	synth.speak(utterThis);
 };
@@ -52,7 +52,7 @@ $( document ).ready(function() {
 	  if(inputTxt !== ''){
 		var utterThis = new SpeechSynthesisUtterance(inputTxt);
 		utterThis.pitch = 1;
-		utterThis.rate = 1.25;
+		utterThis.rate = 1.5;
 		synth.speak(utterThis);
 	  }
 	}
@@ -76,7 +76,7 @@ $( document ).ready(function() {
 
     var request_2 = function (e) {
         state = 0;
-        query = $('a#sendbox2').text();
+        query = $('a#sendbox2').attr("title");
         $(".chat").append('<li class="clearfix"><div class="message row"></div><div class="col s10 m10 l10 chat-body clearfix right"><img src="/img/user.png" alt="User Avatar" class="mfr circle responsive-img" align="right"><p class="right">' + query + '</p></div></li>');
         $(".panel-body").stop().animate({
             scrollTop: $(".panel-body")[0].scrollHeight
@@ -92,7 +92,7 @@ $( document ).ready(function() {
     };
     var request_3 = function (e) {
         state = 0;
-        query = $('a#sendbox3').text();
+        query = $('a#sendbox3').attr("title");
         $(".chat").append('<li class="clearfix"><div class="message row"></div><div class="col s10 m10 l10 chat-body clearfix right"><img src="/img/user.png" alt="User Avatar" class="mfr circle responsive-img" align="right"><p class="right">' + query + '</p></div></li>');
         $(".panel-body").stop().animate({
             scrollTop: $(".panel-body")[0].scrollHeight

@@ -3,12 +3,13 @@
 <head>
     <!--Import Google Icon Font-->
     <title>Aiwisfin portfolio</title>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./static/content/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="./static/content/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
     <link rel="stylesheet" href=".\static\index.min.css">
     <link rel="stylesheet" href=".\static\all.css">
     <script src="./static/jquery.js"></script>
@@ -48,16 +49,17 @@
             .submit:hover, .submit:active {
                 background-color: #0063b5;
             }
-        tr{
-            max-width:200px;
+
+        tr {
+            max-width: 200px;
         }
 
-        tr td {
-            padding: 5px;
-            padding-right: 15px;
-            table-layout:fixed;
-            max-width: 1px;
-        }
+            tr td {
+                padding: 5px;
+                padding-right: 15px;
+                table-layout: fixed;
+                max-width: 1px;
+            }
 
         label {
             font-family: Microsoft JhengHei;
@@ -150,7 +152,7 @@
         }
     </style>
 
-    
+
 </head>
 <body>
 
@@ -478,8 +480,9 @@
 
 
                             <tr>
+                               
                                 <td class="auto-style22">
-                                    <input type="button" name="Button1" value="送出" id="Button1" class="submit" onclick="myFunction()">
+                                    <a class="waves-effect waves-light btn  blue lighten-1" onclick="myFunction()"><i class="material-icons">send</i></a>
                                 </td>
                             </tr>
 
