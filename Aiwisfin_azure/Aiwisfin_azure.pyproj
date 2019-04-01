@@ -270,7 +270,6 @@
     <Content Include="Aiwisfin_azure\img\v=8.png" />
     <Content Include="Aiwisfin_azure\img\v=9.png" />
     <Content Include="Aiwisfin_azure\img\網頁投資組合圖檔.png" />
-    <Content Include="Aiwisfin_azure\TextFile1.txt" />
     <Content Include="mydatabase.sqlite" />
     <Content Include="Aiwisfin_azure\static\all.css" />
     <Content Include="Aiwisfin_azure\static\all.js" />
