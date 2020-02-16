@@ -41,5 +41,9 @@ def getWeather(city,question):
         return (weather)
     else:
         return("氣溫:"+temperature+'°C'+'\n'+weather)
+if __name__ == "__main__":
+    print(getWeather("台北",1))
+    
+
 
 

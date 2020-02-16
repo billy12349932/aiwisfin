@@ -80,8 +80,8 @@ def add_numbers():
             query = regex.search(query)
             reply=getWeather(query.group(1),0)
         elif(re.search('公告',query)!=None):
-            reply="1.目前所有服務修復完畢正常運作中<br>\
-                   2.Facebook機器人功能受限於官方相關新規定而無法對外正式發佈，敬請見諒"
+            reply="1.最後維護2019/4/27<br>\
+                   2.Facebook機器人功能受限於官方規定，無法對外發佈"
         elif(re.search('熱門查詢',query)!=None):
              con = lite.connect('mydatabase.sqlite')
              cur = con.cursor()
@@ -96,7 +96,8 @@ def add_numbers():
              reply = "熱門查詢排行榜:<br>"+result
              
              con.close()
-            
+        elif(re.search('股價查詢',query)!=None):
+            reply="請以股票代碼或公司名稱查詢"   
         elif(re.match('學說話管理員',query)!=None):
             con = lite.connect('mydatabase.sqlite')
             cur = con.cursor()
@@ -117,7 +118,7 @@ def add_numbers():
                 reply="學會了! 問題:"+query[1]+" 回答:"+query[2]
             except Exception as e:
                 
-                 reply='請以;分隔問答(EX:學說話;你好嗎;我很好)'
+                 reply='以;分割問答拉宅男'
        
         elif(re.search('(我姓|我叫|我是)',query)!=None):
 
@@ -164,7 +165,7 @@ def add_numbers():
                 reply=get_constitution(query.group())
             except Exception as e:
                 reply = ('請輸入阿拉伯數字法律編號')
-           
+        
         elif(re.search('天氣',query)!=None):
             try:
                 regex = re.compile(getSite())
@@ -207,7 +208,7 @@ def add_numbers():
                         query = regex.search(query)
                         reply = getCurrency(query.group(1))
                 else:
-                        reply="請確認幣別是否在目前提供的查詢之中(美金、日圓、人民幣、英鎊、歐元)"
+                        reply="請搭配幣別查詢(美金、日圓、人民幣、英鎊、歐元)"
            
         elif(re.search('\d',query)!=None):
             regex = re.compile('\d+')
@@ -236,12 +237,14 @@ def add_numbers():
                reply=ret[1]
             else:
                 query = query.upper()
-                response = runAIML(query)
-                if response != '':
+                response = wiki_search(query)
+                
+                if response != None:
                     reply = response
                 else:
-                    if wiki_search(query)!=None:
-                        reply = wiki_search(query)
+                    response = runAIML(query)
+                    if  response!= ' ':
+                        reply =response
                     else:
                         raise Exception
             con.close()

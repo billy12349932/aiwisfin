@@ -11,13 +11,14 @@ import re
 
 # In[129]:
 
-
+ 
 def get_Civil(no):
     r = requests.get('https://law.moj.gov.tw/LawClass/LawSingle.aspx?Pcode=B0000001&FLNO='+no)
     soup = BeautifulSoup(r.text,'html.parser')
     row = soup.find_all('table')[0].find_all('tr')[6].find_all('td')[2].find_all('pre')[0]
     regex = re.compile(r'</?[^>]+>')
     clean = regex.sub('',str(row))
+      
     return clean
 def get_constitution(no):
     r = requests.get('https://law.moj.gov.tw/LawClass/LawSingle.aspx?Pcode=A0000001&FLNO='+no)

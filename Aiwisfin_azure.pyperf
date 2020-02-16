@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ProfilingTarget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectTarget>
+    <TargetProject>638e662f-a1ed-4819-ac5b-b54f535e050b</TargetProject>
+    <FriendlyName>Aiwisfin_azure</FriendlyName>
+  </ProjectTarget>
+  <Reports />
+  <UseVTune>false</UseVTune>
+</ProfilingTarget>

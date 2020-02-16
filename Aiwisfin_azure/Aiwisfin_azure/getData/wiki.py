@@ -9,9 +9,11 @@ def wiki_search(query):
         r = r.split('。')[0]
         r = r.split('）',1)[1]
         r = re.sub('["，]',"",r,count=1)
+        
         return r
     except Exception as e:
         return None
+   
 
    
    
